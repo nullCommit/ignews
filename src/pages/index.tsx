@@ -1,5 +1,5 @@
 import Head from 'next/head';
-import { GetServerSideProps } from 'next';
+import { GetStaticProps } from 'next';
 import { SubscribeButton } from '../components/SubscribeButton';
 
 import styles from './home.module.scss';
@@ -11,6 +11,10 @@ interface HomeProps {
     amount: number;
   };
 }
+
+// Client-side -> Quando não preciso de indexação ou quando a informação é carregada a partir de uma ação do usuário
+// Server-side Rendering -> indexação, mas com conteúdo dinâmico
+// Static Site Generation -> indexação, mas mesmo conteúdo pata todos (ex. paginas de um blog)
 
 export default function Home({ product }: HomeProps) {
   return (
@@ -39,7 +43,7 @@ export default function Home({ product }: HomeProps) {
   );
 }
 
-export const getServerSideProps: GetServerSideProps = async () => {
+export const getStaticProps: GetStaticProps = async () => {
   const price = await stripe.prices.retrieve('price_1KiLMiCbwUVmAiTHwSP8kXAT', {
     expand: ['product'],
   });
@@ -56,5 +60,6 @@ export const getServerSideProps: GetServerSideProps = async () => {
     props: {
       product,
     },
+    revalidate: 60 * 60 * 24, // 24h
   };
 };

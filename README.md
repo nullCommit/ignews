@@ -4,7 +4,7 @@ um projeto de site de notícias e artigos com sistema de inscrição pagos.
 
 Projeto desenvolvido em React, Typescript e Sass. Utiliza o conceito de Serverless através do Next e demonstra o uso de login social usando o Next Auth. Como foi utilizado o recurso de API routes do Next, achei apropriado usar o banco de dados FaunaDB para salvar os dados de autenticação e inscrição do usuário, uma vez que o mesmo foi desenvolvido pensando em aplicações serverless.
 
-Como processamento de pagamentos, usamos a api do Stripe por nenhum motivo em específico, somente pela facilidade da API no modo de desenvolvimento, uma vez que o mesmo possui uma precificação adequada.
+Como processamento de pagamentos, usamos a api do Stripe por nenhum motivo em específico, somente pela facilidade da API no modo de desenvolvimento, já que ele possui uma precificação adequada.
 
 Esse projeto foi desenvolvido com o objetivo de testar o uso das tecnologias empregadas e como meio de aprendizado.
 

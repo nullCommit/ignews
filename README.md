@@ -6,6 +6,8 @@ Projeto desenvolvido em React, Typescript e Sass. Utiliza o conceito de Serverle
 
 Como processamento de pagamentos, usamos a api do Stripe por nenhum motivo em específico, somente pela facilidade da API no modo de desenvolvimento, já que ele possui uma precificação adequada.
 
+Para CMS optamos por pelo Prismic por ser um excelente CMS e dispor de um plano grátis justo e adequado para o uso em desenvolvimento.
+
 Esse projeto foi desenvolvido com o objetivo de testar o uso das tecnologias empregadas e como meio de aprendizado.
 
 ## Getting Started

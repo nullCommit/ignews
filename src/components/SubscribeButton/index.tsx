@@ -15,7 +15,7 @@ export function SubscribeButton() {
     }
 
     // caso o usuário já tenha uma inscrição ativa, redireciona para os posts
-    if (session.activeSubscription) {
+    if (session?.activeSubscription) {
       router.push('/posts');
       return;
     }
